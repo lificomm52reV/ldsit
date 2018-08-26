@@ -153,8 +153,8 @@ GOOGLE_MAP_API_KEY = 'AIzaSyD31CT9P9KxvNUJOwDq2kcFEIG8ADgaFgw'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "mainsite"
+WAGTAIL_SITE_NAME = "lificomm52reV.pythonanywhere.com"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'lificomm52reV.pythonanywhere.com'
