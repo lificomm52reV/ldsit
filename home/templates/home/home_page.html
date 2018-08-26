@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %} 
+{% load static wagtailuserbar %}
+
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+    <h1>{{ page.title }}</h1>
+
+        <!-- <h1 class="header center teal-text text-lighten-2">{{ page.title }}</h1> -->
+        <div class="row center"> 
+            <div class="intro">{{ page.intro|richtext }}</div>
+           <!-- <h5 class="header col s12 light">{{ page.intro|richtext  }} </h5> -->
+      </div>
+      <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+      </div>
+      <br><br>
+
+  </div>
+</div>
+<div class="parallax"><img src="{% static 'imgs/background1.jpg' %}" alt="Unsplashed background img 1"></div>
+</div>
+
+
+
+    <p>Админка<a href="{% url 'wagtailadmin_home' %}">here</a>.</p>
+
+{{ page.body | richtext }} 
+{% endblock %}
+

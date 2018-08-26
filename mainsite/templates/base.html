@@ -1,0 +1,159 @@
+{% load static wagtailuserbar %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>
+      {% block title %}
+      {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+      {% endblock %}
+      {% block title_suffix %}
+      {% with self.get_site.site_name as site_name %}
+      {% if site_name %}- {{ site_name }}{% endif %}
+      {% endwith %}
+      {% endblock %}
+  </title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />   
+  <!-- CSS  -->
+  {# Global stylesheets #}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!--   <link rel="stylesheet" type="text/css" href="{% static 'css/adv.css' %}"> -->
+
+  {% block extra_css %}
+  {# Override this in templates to add extra stylesheets #}
+  {% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+    
+
+    {# Global javascript #}
+    <!--  <script type="text/javascript" src="{% static 'js/adv.js' %}"></script> -->
+
+    {% block extra_js %}
+    {# Override this in templates to add extra javascript #}
+    {% endblock %}
+
+
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+              <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Лого</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="/новости/">Новости </a></li>
+             <li><a href="/продукция/">Продукция</a></li>
+             <li><a href="/контакты/">Контакты</a></li>
+             <li><a href="/о-нас/">О нас</a></li>
+             <li><a href="/оставить-заявку/">Оставить заявку</a></li>
+        </ul>
+{% wagtailuserbar %}
+
+        
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="/новости/">Новости </a></li>
+             <li><a href="/продукция/">Продукция</a></li>
+             <li><a href="/контакты/">Контакты</a></li>
+             <li><a href="/о-нас/">О нас</a></li>
+             <li><a href="/оставить-заявку/">Оставить заявку</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+
+{% block content %}{% endblock %}
+ 
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+      </div>
+  </div>
+</div>
+<div class="parallax"><img src="{% static 'imgs/background2.jpg' %}" alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+      </div>
+  </div>
+
+</div>
+</div>
+
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+      </div>
+  </div>
+</div>
+<div class="parallax"><img src="{% static 'imgs/background3.jpg' %}" alt="Unsplashed background img 3"></div>
+</div>
+
+
+<footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Пара слов о компании</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+      </div>
+      <div class="col l3 s12">
+          <h5 class="white-text">Меню</h5>
+          <ul>
+           
+            <li><a class="white-text" href="/новости/">Новости </a></li>
+             <li><a class="white-text" href="/продукция/">Продукция</a></li>
+             <li><a class="white-text" href="/контакты/">Контакты</a></li>
+             <li><a class="white-text" href="/о-нас/">О нас</a></li>
+             <li><a class="white-text" href="/оставить-заявку/">Оставить заявку</a></li>
+        </ul>
+    </div>
+    <div class="col l3 s12">
+      <h5 class="white-text">Связаться с нами</h5>
+      <ul>
+        <li><a class="white-text" href="#!">Телефон</a></li>
+        <li><a class="white-text" href="#!">ВК</a></li>
+        <li><a class="white-text" href="#!">FB</a></li>
+        <li><a class="white-text" href="#!">INSTAGRAM</a></li>
+    </ul>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+  <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+  </div>
+</div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{% static 'js/materialize.js' %}"></script>
+<script src="{% static 'js/init.js' %}"></script>
+
+</body>
+</html>

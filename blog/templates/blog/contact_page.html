@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-contactpage{% endblock %}
+
+{% block content %}
+  
+<div class="container">
+    <div class="section">
+
+      <div class="row">
+         <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text" class="material-icons">{{page.title}}</i></i></h3>
+        
+
+        
+          <p class="left-align light"> {{ item.caption }} 
+           {{ page.body|richtext }}</p>
+      </div>
+  </div>
+
+
+
+
+ 
+  
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+ 
+   
+
+   
+
+
+    
+
+{% endblock %}
